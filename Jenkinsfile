@@ -6,9 +6,8 @@ pipeline {
         sh '''
         /usr/local/bin/docker version
         /usr/local/bin/docker info
-        docker compose version
-        curl --version
-        jq --version
+        usr/local/bin/docker compose version
+        /usr/bin/curl  --version
         '''
       }
     }
