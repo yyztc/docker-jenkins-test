@@ -6,7 +6,7 @@ pipeline {
         sh '''
         /usr/local/bin/docker version
         /usr/local/bin/docker info
-        #/usr/local/bin/docker-compose version
+        /usr/local/bin/docker-compose version
         /usr/bin/curl  --version
         '''
       }
