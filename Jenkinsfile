@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent {label 'macos'}
   stages {
     stage("verify tooling..") {
       steps {
