@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Verify tooling') {
       steps {
-        withEnv(["PATH=$PATH:~/.local/bin"]) {
+        withEnv(["PATH=$PATH:/usr/local/bin"]) {
           sh '''
           /usr/local/bin/docker version
           /usr/local/bin/docker info
