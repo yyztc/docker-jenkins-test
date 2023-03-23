@@ -1,7 +1,7 @@
 pipeline {
   agent {label 'macos'}
   stages {
-    stage("verify tooling..") {
+    stage('Verify tooling') {
       steps {
         sh '''
         /usr/local/bin/docker version
@@ -10,6 +10,10 @@ pipeline {
         /usr/bin/curl  --version
         '''
       }
+    }
+    stage('Start container') {
+      sh 'docker-compose up -d --no-color --wait
+      sh 'docker-compose ps'
     }
   }
 }
