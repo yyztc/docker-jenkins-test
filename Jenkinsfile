@@ -16,7 +16,7 @@ pipeline {
     stage('Start container') {
       steps {
         withEnv(["PATH=$PATH:/usr/local/bin"]) {
-          sh '/usr/local/bin/docker-compose up -d --no-color --wait'
+          sh '/usr/local/bin/docker-compose up -d --no-color'
           sh '/usr/local/bin/docker-compose ps'
         }
       }
